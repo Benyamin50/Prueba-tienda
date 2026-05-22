@@ -346,3 +346,8 @@
     font-weight: 700;
   }
 }
+
+
+*{
+  cursor: none;
+}
