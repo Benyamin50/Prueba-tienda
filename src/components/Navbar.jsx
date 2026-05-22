@@ -5,7 +5,7 @@ import { ShoppingCart } from 'lucide-react';
 import { FaRegUser } from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3, } from "react-icons/hi";
 import ResponsiveMenu from './ResponsiveMenu';
-import { UpdateFollower } from 'react-mouse-follower';
+
 
 
 export const NavbarMenu = [
@@ -53,49 +53,24 @@ const Navbar = () => {
           <ul className='flex items-center gap-4 relative z-40'>
             {NavbarMenu.map((item, index) => (
               <li key={index}>
-                <UpdateFollower
-                mouseOptions={{
-                  backgroundColor: "white",
-                  zIndex: 9999,
-                  followSpeed: 1.5,
-                  scale:5,
-                  mixBlendMode: "difference"
-                }}
-                >
+                
                 <Link to={item.link} className='inline-block text-base font-semibold py-2 px-3 uppercase'>
                   {item.title}
                 </Link>
-                </UpdateFollower>
+               
               </li>
             ))}
-            <UpdateFollower 
-             mouseOptions={{
-              backgroundColor: "white",
-              zIndex: 9999,
-              followSpeed: 1.5,
-              scale:5,
-              mixBlendMode: "difference"
-            }}
-            >
+           
             <Link to='/cart'>
               <button className='text-xl ps-14'>
                 <ShoppingCart />
               </button>
             </Link>
-            </UpdateFollower>
-            <UpdateFollower
-             mouseOptions={{
-              backgroundColor: "white",
-              zIndex: 9999,
-              followSpeed: 1.5,
-              scale:5,
-              mixBlendMode: "difference"
-            }}
-            >
+           
             <button className='text-xl ps-8'>
               <FaRegUser />
             </button>
-            </UpdateFollower>
+           
 
           </ul>
         </div>
